@@ -1,0 +1,255 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Competitor Analysis | Call Before You Sign Heating and Air</title><style>
+:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9aa7b4;--line:#2a3340;--accent:#2f81f7;
+  --good:#3fb950;--bad:#f85149;--gradF:#f85149;--gradD:#e8702a;--gradC:#d29922;--gradB:#3fb950;--gradA:#2ea043;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--mut);font-weight:600}
+header{padding:46px 0 28px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 70% -10%,rgba(47,129,247,.18),transparent)}
+h1{font-size:30px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:15px}
+.hero{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center;margin:34px 0 8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.gradecard{border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;position:relative;overflow:hidden}
+.gc-F{background:linear-gradient(160deg,#2a1410,#1c2330)}.gc-D{background:linear-gradient(160deg,#2a1c10,#1c2330)}
+.gc-C{background:linear-gradient(160deg,#2a2410,#1c2330)}.gc-B{background:linear-gradient(160deg,#102a1a,#1c2330)}
+.bigletter{font-size:96px;font-weight:900;line-height:1;position:relative}
+.bl-F{color:var(--gradF);text-shadow:0 0 40px rgba(248,81,73,.45)}
+.bl-D{color:var(--gradD);text-shadow:0 0 40px rgba(232,112,42,.45)}
+.bl-C{color:var(--gradC);text-shadow:0 0 40px rgba(210,153,34,.45)}
+.score100{font-size:18px;color:var(--mut);margin-top:6px;position:relative}
+.heroread h2{font-size:21px;font-weight:800;margin-bottom:10px}
+.heroread p{color:var(--mut);font-size:15.5px}
+.heroread .tag{display:inline-block;margin-top:14px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink);background:var(--panel)}
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+.h{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.rname{font-weight:600;font-size:15px}
+.bar{height:7px;background:#0b0f15;border-radius:99px;margin-top:9px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.badge{font-weight:800;font-size:15px;min-width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0d1117}
+.gF{background:var(--gradF)}.gD{background:var(--gradD)}.gC{background:var(--gradC)}.gB{background:var(--gradB);color:#06210f}.gA{background:var(--gradA);color:#06210f}
+.sc{font-size:12px;color:var(--mut);margin-top:3px}
+.flag{background:linear-gradient(160deg,#2a1410,#161b22);border:1px solid #6f2a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.flag .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--bad);font-weight:700;margin-bottom:8px}
+.win{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.win .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--good);font-weight:700;margin-bottom:8px}
+.warn{background:linear-gradient(160deg,#2a2410,#161b22);border:1px solid #6f5a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.warn .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gradC);font-weight:700;margin-bottom:8px}
+.flag p,.win p,.warn p{color:var(--mut);font-size:14.5px;margin-bottom:9px}
+.flag p:last-child,.win p:last-child,.warn p:last-child{margin-bottom:0}
+.flag b,.win b,.warn b{color:var(--ink)}
+.flag ul,.win ul,.warn ul{margin:0 0 9px 20px;color:var(--mut);font-size:14.5px}
+.flag li,.win li,.warn li{margin-bottom:6px}
+.code{background:#0b0f15;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;line-height:1.85;color:var(--mut);overflow-x:auto}
+.code .ph{color:#ff9d94;font-weight:700}.code .ok{color:#84e0a8;font-weight:700}.code .c{color:#5b6672}
+.cmp{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp th{text-align:left;padding:11px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line);font-weight:700}
+.cmp td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--mut);vertical-align:top}
+.cmp tr:last-child td{border-bottom:none}.cmp td b{color:var(--ink)}.cmp tr.you td{background:#241a12}
+.cmp .yes{color:var(--good);font-weight:700}.cmp .no{color:var(--bad);font-weight:700}
+.opp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.opp{grid-template-columns:1fr}}
+.ocard{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px;text-align:center}
+.ocard .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
+.ocard .big{font-size:30px;font-weight:900;color:var(--good);margin:8px 0 2px}
+.ocard .small{font-size:13px;color:var(--mut)}
+.oppnote{color:var(--mut);font-size:14px;margin-top:14px}.oppnote b{color:var(--ink)}
+.arrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0 2px;flex-wrap:wrap}
+.pill{font-size:60px;font-weight:900;line-height:1}
+.pill.from-F{color:var(--gradF)}.pill.from-D{color:var(--gradD)}.pill.from-C{color:var(--gradC)}
+.pill.to{color:var(--gradA)}
+.pilllab{font-size:12px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.1em}
+.ar{font-size:34px;color:var(--mut)}
+ul.road{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:760px){ul.road{grid-template-columns:1fr}}
+ul.road li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:14.5px}
+.road2 li{border-left-color:var(--good)}
+.cta{text-align:center;padding:40px 0 56px}
+.cta h2{font-size:22px;font-weight:800;margin-bottom:8px}
+.cta p{color:var(--mut);font-size:15px}
+footer{color:var(--mut);font-size:12.5px;text-align:center;padding:22px 0 40px;line-height:1.7}
+.gscale{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 26px 20px;margin-top:16px}
+.gscale .gtitle{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:700;margin-bottom:26px;text-align:center}
+.gtrack{position:relative;height:14px;border-radius:8px;background:linear-gradient(90deg,#f85149 0%,#f85149 18%,#e3833c 34%,#d4a72c 52%,#7ec46a 74%,#3fb950 100%);margin:0 4px}
+.gmark{position:absolute;top:-46px;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.gmark .gm-lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:700}
+.gmark .gm-val{font-size:19px;font-weight:900;line-height:1.15}
+.gmark:after{content:"";position:absolute;left:50%;top:100%;width:2px;height:22px;transform:translateX(-50%);background:currentColor;opacity:.75}
+.gmark.now{color:var(--bad)}.gmark.now .gm-val{color:var(--bad)}
+.gmark.proj{color:var(--good)}.gmark.proj .gm-val{color:var(--good)}
+.gmark.proj{top:auto;bottom:-52px}
+.gmark.proj:after{top:auto;bottom:100%}
+.gdot{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);border:3px solid #0d1117}
+.gdot.now{background:var(--bad)}.gdot.proj{background:var(--good)}
+.gticks{display:flex;justify-content:space-between;margin:66px 4px 0;font-size:11px;letter-spacing:.08em;color:var(--mut);font-weight:700}
+@media(max-width:620px){.gmark .gm-lab{font-size:9px}.gmark .gm-val{font-size:16px}}
+
+.agnav{position:sticky;top:0;z-index:60;background:rgba(13,17,23,.93);backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+.agnav .inner{max-width:1080px;margin:0 auto;padding:0 22px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.agnav .inner::-webkit-scrollbar{display:none}
+.agnav a{flex:0 0 auto;padding:13px 12px;font-size:13.5px;font-weight:600;color:var(--mut);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}
+.agnav a:hover{color:var(--ink)}
+.agnav a.on{color:var(--accent);border-bottom-color:var(--accent)}
+.agnav a.ext{opacity:.8}
+@media(max-width:640px){.agnav .inner{padding:0 14px}.agnav a{padding:12px 10px;font-size:13px}}
+</style></head><body><nav class="agnav"><div class="inner"><a href="assets.html">All Assets</a><a href="./">Audit</a><a href="competitors.html" class="on">Competitors</a></div></nav>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Competitor Analysis &middot; HVAC &middot; Fremont, Dodge County &amp; Greater Omaha</div>
+    <div class="sub">Prepared for Lucus Bergeron &middot; Call Before You Sign Heating and Air &middot; 21 September 2026 &middot; AG1 Consulting</div>
+    <h1>Every Firm We Could Check Sells A Maintenance Plan Or A Tune-Up. You Are The Only One Who Does Not.</h1>
+
+    <div class="hero">
+      <div class="gradecard gc-F">
+        <div class="bigletter bl-F" style="font-size:48px">0</div>
+        <div class="score100">maintenance plans, service agreements or tune-ups on your site</div>
+      </div>
+      <div class="heroread">
+        <h2>You told us repairs turn into installs. The maintenance agreement is the machine that makes that happen on a schedule, and it is the one thing your competitors all have.</h2>
+        <p>Getzschman sells tune-ups. BLT sells tune-ups. Burton sells a membership. <b>Those are not cleaning jobs
+        &mdash; they are a booked reason to be inside a house twice a year, standing next to an ageing system.</b></p>
+        <div class="tag">Read from each firm's own website on 21 September 2026</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="h">The Comparison</div>
+    <div style="overflow-x:auto">
+    <table class="cmp">
+      <tr>
+        <th></th>
+        <th>BLT (Fremont)</th>
+        <th>Getzschman</th>
+        <th>Controlled Comfort</th>
+        <th>Burton (Omaha)</th>
+        <th class="you">Call Before You Sign</th>
+      </tr>
+      <tr><td><b>Trading since</b></td><td>40+ years</td><td class="yes">1960</td><td class="yes">1964</td><td class="yes">1989</td><td><b>2025</b></td></tr>
+      <tr><td><b>Maintenance plan / tune-up</b></td><td class="yes">Tune-up</td><td class="yes">Tune-up</td><td>Not found</td><td class="yes">Membership</td><td class="no"><b>None</b></td></tr>
+      <tr><td><b>Tappable phone</b></td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="no"><b>None found</b></td></tr>
+      <tr><td><b>Forms on homepage</b></td><td class="yes">2</td><td class="yes">2</td><td>Not found</td><td>Not found</td><td class="no"><b>0 &mdash; contact page only</b></td></tr>
+      <tr><td><b>Analytics / Tag Manager</b></td><td class="no">None found</td><td class="yes">GTM</td><td class="yes">GTM</td><td class="yes">GA4 + GTM</td><td class="no"><b>None</b></td></tr>
+      <tr><td><b>Meta pixel</b></td><td class="no">None found</td><td class="no">None found</td><td class="yes">Yes</td><td class="no">None found</td><td class="no"><b>None</b></td></tr>
+      <tr><td><b>HVAC business schema</b></td><td class="no">None found</td><td class="yes">LocalBusiness</td><td class="yes">HVACBusiness + FAQ + Offer</td><td class="yes">HVACBusiness + hours</td><td class="no"><b>WebSite only</b></td></tr>
+      <tr><td><b>Pages published</b></td><td>6</td><td>3 in sitemap</td><td class="yes">71</td><td>3 in sitemap</td><td><b>8</b> (one a duplicate)</td></tr>
+    </table>
+    </div>
+    <div class="tag" style="margin-top:12px">Read from each firm's own served pages and published sitemaps on 21 September 2026. Skradski Heating &amp; Cooling (Omaha, trading since 1951) blocked our request and has not been assessed at all. "Not found" records what our check returned and is not proof of absence; sitemap counts can understate a site's true size, and several of these sites render parts of a page with JavaScript.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">The Finding That Matters Most</div>
+    <div class="flag">
+      <div class="lab">This is the answer to "who actually gets installs regularly"</div>
+      <p>Nobody in this market reliably buys qualified install leads. <b>What they have instead is a service base</b>
+      &mdash; Getzschman since 1960, Burton since 1989, BLT for over forty years &mdash; and a tune-up or membership
+      that puts them inside a customer's house on a schedule.</p>
+      <p>When a fifteen-year-old furnace finally fails, <b>the firm that has been servicing it is the firm quoting the
+      replacement.</b> That is not a lead source. It is an install pipeline they own, and it compounds every year.</p>
+      <p><b>You already described this mechanism yourself when you said repairs turn into installs.</b> The difference
+      is that they have built a product around it and you have not.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">The One In Your Own Town Is The Most Beatable</div>
+    <div class="code">
+BLT Plumbing, Heating &amp; Air &mdash; 1010 S Broad St, Fremont
+
+  Trading:              <span class="ok">40+ years</span>
+  Tappable phone:       <span class="ok">yes</span>   402-721-9580
+  Forms on homepage:    <span class="ok">2</span>
+
+  Analytics:            <span class="ph">none found</span>
+  Meta pixel:           <span class="ph">none found</span>
+  Business schema:      <span class="ph">none found</span>
+  Pages:                <span class="ph">6</span>
+    </div>
+    <div class="win">
+      <div class="lab">Forty years of trust and almost no digital position</div>
+      <p>BLT is the incumbent in Fremont itself and is measuring nothing, marking up nothing, and publishing six pages.
+      <b>They will beat you on reputation for years. They will not beat you on being findable</b>, and they cannot
+      retarget anybody.</p>
+      <p>The Omaha firms are the harder problem &mdash; Burton runs GA4 and Tag Manager with HVAC schema and a
+      membership, and Controlled Comfort has 71 pages, a Meta pixel and the most complete markup of anyone here.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Where You Win, And It Is Not Where You Think</div>
+    <div class="win">
+      <div class="lab">Nobody here is positioned on anything except age</div>
+      <ul>
+        <li><b>Every one of these firms sells "we have been here a long time".</b> 1951, 1960, 1964, 1989, forty years.
+        That is the entire proposition on offer in this market.</li>
+        <li><b>Not one of them is speaking to the fear you named your company after.</b> Nobody is saying "get a second
+        opinion before you sign". You own that, and the name says it before anyone reads a word.</li>
+        <li><b>You cannot out-age 1960 and you never will.</b> So stop competing there. A homeowner holding a
+        frightening quote is not asking who is oldest &mdash; they are asking who is honest.</li>
+        <li><b>Age is also a weakness.</b> A sixty-five-year-old firm is exactly who people are afraid is upselling
+        them, and none of them can adopt your position without contradicting their own.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What We Would Do About It</div>
+    <ul class="road">
+      <li><b>Launch a maintenance agreement.</b> It is the single biggest structural gap between you and every
+      established firm here, and it is the mechanism that turns repairs into installs on a schedule rather than by luck.</li>
+      <li><b>Put the second-opinion promise on every page</b>, not just in the company name. It is the only real
+      position in this market and nobody can copy it.</li>
+      <li><b>Match the table stakes first</b> &mdash; tappable phone, a form on every service page, HVAC business schema
+      with hours. Three competitors have all of it; you have none of it.</li>
+      <li><b>Then measure.</b> Two of these firms are tracking and one is retargeting. Until you are, you cannot tell
+      which of them you are actually losing to.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>They have sixty-five years and a service book. You have the only honest position in the market.</h2>
+    <p>The service book is buildable. Your position is not copyable. Build the first before they notice the second.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Prepared by Andrei Givero &middot; AG1 Consulting &middot; 21 September 2026<br><br>
+    For Lucus Bergeron, Call Before You Sign Heating and Air, Fremont, Nebraska. <b>Maintenance and tune-up offers,
+    tappable telephone links, forms, analytics, tag managers, Meta pixels, structured data types, published page counts
+    and founding years were read from each named company's own served pages and published sitemaps on 21 September
+    2026.</b> Cells marked "not found" record what our check returned on that date and must not be read as proof of
+    absence; several of these sites render parts of a page with JavaScript, which a static read cannot see, and a sitemap
+    count can understate a site's true size. <b>Skradski Heating &amp; Cooling returned an access block and has not been
+    assessed in any respect; it appears here only as an acknowledged gap.</b> Founding years and "Best of Omaha" style
+    claims are as each firm publishes them and have not been independently verified. <b>No company's revenue, job volume,
+    install volume, staffing, pricing, close rate, advertising spend, licensing, insurance or workmanship has been
+    assessed, and nothing whatsoever is claimed or implied about any of them.</b> <b>No Google Business Profile, map pack
+    position, review count or star rating has been measured for any firm, including Call Before You Sign.</b> Statements
+    about how service bases and maintenance agreements produce replacement work are general commercial observations drawn
+    from our own experience, <b>not measurements of any business named here, and no number of installs, conversion rate,
+    lead volume, cost per lead or revenue outcome is forecast or promised anywhere in this document.</b> Nothing in this
+    document is a comment on the competence, conduct or standing of any named business; company names are used for
+    identification only and belong to their respective owners. The commentary and any judgements are AG1's own editorial
+    opinion.
+  </div>
+</footer>
+</body></html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Strategy &middot; Call Before You Sign &middot; AG1 Consulting</title><style>
+:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9aa7b4;--line:#2a3340;--accent:#2f81f7;
+  --good:#3fb950;--bad:#f85149;--gradF:#f85149;--gradD:#e8702a;--gradC:#d29922;--gradB:#3fb950;--gradA:#2ea043;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--mut);font-weight:600}
+header{padding:46px 0 28px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 70% -10%,rgba(47,129,247,.18),transparent)}
+h1{font-size:30px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:15px}
+.hero{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center;margin:34px 0 8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.gradecard{border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;position:relative;overflow:hidden}
+.gc-F{background:linear-gradient(160deg,#2a1410,#1c2330)}.gc-D{background:linear-gradient(160deg,#2a1c10,#1c2330)}
+.gc-C{background:linear-gradient(160deg,#2a2410,#1c2330)}.gc-B{background:linear-gradient(160deg,#102a1a,#1c2330)}
+.bigletter{font-size:96px;font-weight:900;line-height:1;position:relative}
+.bl-F{color:var(--gradF);text-shadow:0 0 40px rgba(248,81,73,.45)}
+.bl-D{color:var(--gradD);text-shadow:0 0 40px rgba(232,112,42,.45)}
+.bl-C{color:var(--gradC);text-shadow:0 0 40px rgba(210,153,34,.45)}
+.score100{font-size:18px;color:var(--mut);margin-top:6px;position:relative}
+.heroread h2{font-size:21px;font-weight:800;margin-bottom:10px}
+.heroread p{color:var(--mut);font-size:15.5px}
+.heroread .tag{display:inline-block;margin-top:14px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink);background:var(--panel)}
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+.h{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.rname{font-weight:600;font-size:15px}
+.bar{height:7px;background:#0b0f15;border-radius:99px;margin-top:9px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.badge{font-weight:800;font-size:15px;min-width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0d1117}
+.gF{background:var(--gradF)}.gD{background:var(--gradD)}.gC{background:var(--gradC)}.gB{background:var(--gradB);color:#06210f}.gA{background:var(--gradA);color:#06210f}
+.sc{font-size:12px;color:var(--mut);margin-top:3px}
+.flag{background:linear-gradient(160deg,#2a1410,#161b22);border:1px solid #6f2a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.flag .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--bad);font-weight:700;margin-bottom:8px}
+.win{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.win .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--good);font-weight:700;margin-bottom:8px}
+.warn{background:linear-gradient(160deg,#2a2410,#161b22);border:1px solid #6f5a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.warn .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gradC);font-weight:700;margin-bottom:8px}
+.flag p,.win p,.warn p{color:var(--mut);font-size:14.5px;margin-bottom:9px}
+.flag p:last-child,.win p:last-child,.warn p:last-child{margin-bottom:0}
+.flag b,.win b,.warn b{color:var(--ink)}
+.flag ul,.win ul,.warn ul{margin:0 0 9px 20px;color:var(--mut);font-size:14.5px}
+.flag li,.win li,.warn li{margin-bottom:6px}
+.code{background:#0b0f15;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;line-height:1.85;color:var(--mut);overflow-x:auto}
+.code .ph{color:#ff9d94;font-weight:700}.code .ok{color:#84e0a8;font-weight:700}.code .c{color:#5b6672}
+.cmp{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp th{text-align:left;padding:11px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line);font-weight:700}
+.cmp td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--mut);vertical-align:top}
+.cmp tr:last-child td{border-bottom:none}.cmp td b{color:var(--ink)}.cmp tr.you td{background:#241a12}
+.cmp .yes{color:var(--good);font-weight:700}.cmp .no{color:var(--bad);font-weight:700}
+.opp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.opp{grid-template-columns:1fr}}
+.ocard{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px;text-align:center}
+.ocard .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
+.ocard .big{font-size:30px;font-weight:900;color:var(--good);margin:8px 0 2px}
+.ocard .small{font-size:13px;color:var(--mut)}
+.oppnote{color:var(--mut);font-size:14px;margin-top:14px}.oppnote b{color:var(--ink)}
+.arrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0 2px;flex-wrap:wrap}
+.pill{font-size:60px;font-weight:900;line-height:1}
+.pill.from-F{color:var(--gradF)}.pill.from-D{color:var(--gradD)}.pill.from-C{color:var(--gradC)}
+.pill.to{color:var(--gradA)}
+.pilllab{font-size:12px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.1em}
+.ar{font-size:34px;color:var(--mut)}
+ul.road{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:760px){ul.road{grid-template-columns:1fr}}
+ul.road li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:14.5px}
+.road2 li{border-left-color:var(--good)}
+.cta{text-align:center;padding:40px 0 56px}
+.cta h2{font-size:22px;font-weight:800;margin-bottom:8px}
+.cta p{color:var(--mut);font-size:15px}
+footer{color:var(--mut);font-size:12.5px;text-align:center;padding:22px 0 40px;line-height:1.7}
+.gscale{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 26px 20px;margin-top:16px}
+.gscale .gtitle{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:700;margin-bottom:26px;text-align:center}
+.gtrack{position:relative;height:14px;border-radius:8px;background:linear-gradient(90deg,#f85149 0%,#f85149 18%,#e3833c 34%,#d4a72c 52%,#7ec46a 74%,#3fb950 100%);margin:0 4px}
+.gmark{position:absolute;top:-46px;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.gmark .gm-lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:700}
+.gmark .gm-val{font-size:19px;font-weight:900;line-height:1.15}
+.gmark:after{content:"";position:absolute;left:50%;top:100%;width:2px;height:22px;transform:translateX(-50%);background:currentColor;opacity:.75}
+.gmark.now{color:var(--bad)}.gmark.now .gm-val{color:var(--bad)}
+.gmark.proj{color:var(--good)}.gmark.proj .gm-val{color:var(--good)}
+.gmark.proj{top:auto;bottom:-52px}
+.gmark.proj:after{top:auto;bottom:100%}
+.gdot{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);border:3px solid #0d1117}
+.gdot.now{background:var(--bad)}.gdot.proj{background:var(--good)}
+.gticks{display:flex;justify-content:space-between;margin:66px 4px 0;font-size:11px;letter-spacing:.08em;color:var(--mut);font-weight:700}
+@media(max-width:620px){.gmark .gm-lab{font-size:9px}.gmark .gm-val{font-size:16px}}
+
+.agnav{position:sticky;top:0;z-index:60;background:rgba(13,17,23,.93);backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+.agnav .inner{max-width:1080px;margin:0 auto;padding:0 22px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.agnav .inner::-webkit-scrollbar{display:none}
+.agnav a{flex:0 0 auto;padding:13px 12px;font-size:13.5px;font-weight:600;color:var(--mut);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}
+.agnav a:hover{color:var(--ink)}
+.agnav a.on{color:var(--accent);border-bottom-color:var(--accent)}
+@media(max-width:640px){.agnav .inner{padding:0 14px}.agnav a{padding:12px 10px;font-size:13px}}
+</style></head><body><nav class="agnav"><div class="inner"><a href="assets.html">All Assets</a><a href="./">Audit</a><a href="competitors.html">Competitors</a><a href="strategy.html" class="on">Strategy</a></div></nav>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Strategy &middot; Call Before You Sign Heating &amp; Air &middot; Fremont, Nebraska</div>
+    <div class="sub">Prepared for Lucus Bergeron &middot; 24 September 2026 &middot; AG1 Consulting</div>
+    <h1>You Are Right That Nobody Advertises Their Way To Qualified Installs. That Is Not How Your Competitors Get Them Either.</h1>
+
+    <div class="hero">
+      <div class="gradecard gc-F">
+        <div class="bigletter bl-F" style="font-size:42px">3/3</div>
+        <div class="score100">competitors with a plan or tune-up. You have neither.</div>
+      </div>
+      <div class="heroread">
+        <h2>On our first call you said an install is not a need &mdash; a repair is. You were correct.</h2>
+        <p>Nobody wakes up wanting a furnace. They wake up cold. <b>So an install is not something you can advertise
+        for and expect to fill a calendar.</b></p>
+        <p><b>But Getzschman, Burton and BLT are all getting installs.</b> This is how.</p>
+        <div class="tag">Competitor offers read from their own websites, September 2026</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="h">The Thing All Three Of Them Have</div>
+    <div class="code">
+  Getzschman Heating &amp; Air     since 1960     <span class="ok">tune-up offer</span>
+  Burton Heating &amp; Cooling     since 1989     <span class="ok">membership plan</span>
+  BLT Heating &amp; Air            40+ years      <span class="ok">tune-up offer</span>
+
+  <span class="ph">Call Before You Sign                         none</span>
+    </div>
+    <div class="flag">
+      <div class="lab">A maintenance plan is not a maintenance product. It is an install pipeline.</div>
+      <p><b>Here is the mechanism, in order:</b></p>
+      <ul>
+        <li><b>A repair is the need.</b> Somebody has no heat, they ring, you fix it. That is a transaction and it ends
+        there.</li>
+        <li><b>A plan turns that transaction into a relationship.</b> They sign up for two visits a year, usually for a
+        small monthly fee or an annual one.</li>
+        <li><b>Twice a year, your technician is standing in front of that system.</b> He sees the age of it, the
+        efficiency, the parts that are starting to go.</li>
+        <li><b>He is the one who says &ldquo;this has two winters left in it.&rdquo;</b> Not an advert. A man the
+        homeowner already trusts, looking at their actual furnace.</li>
+        <li><b>When it fails &mdash; or before it fails &mdash; you get the install.</b> Not a bid against three other
+        companies. The call.</li>
+      </ul>
+      <p><b>That is what &ldquo;qualified installs, regularly&rdquo; actually looks like.</b> It is not a lead source.
+      It is a stock of relationships that produces installs on a predictable curve, because every heating system in
+      America is dying at a known rate.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Why This Answers Your Objection Rather Than Dodging It</div>
+    <div class="win">
+      <div class="lab">You said you do not think anyone gets qualified installs regularly</div>
+      <p><b>If you mean by advertising for installs &mdash; you are right, and we would not sell you that.</b> Install
+      adverts reach people who are not in the market, and the few who respond are price-shopping three bids. That is
+      the worst work in the trade.</p>
+      <p><b>What we are describing is different in one specific way: the customer is already yours.</b> You are not
+      finding them. You already met them on a repair. The plan simply stops you losing them between the repair and the
+      replacement.</p>
+      <p><b>And you can predict it.</b> If a plan member's system is fourteen years old, you know roughly when that
+      conversation happens. <b>That is the part that makes it regular</b> &mdash; not the marketing, the
+      arithmetic.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What This Means For The Advertising</div>
+    <div class="warn">
+      <div class="lab">It changes what we would advertise for, not whether</div>
+      <div class="code">
+  What we would NOT advertise for:
+
+    <span class="ph">"new furnace"  "AC installation"  "system replacement"</span>
+    &mdash; not a need, price-shopped, three bids
+
+  What we WOULD advertise for:
+
+    <span class="ok">"furnace repair"     "no heat"     "AC not working"</span>
+    <span class="ok">"emergency HVAC"     "furnace tune up"</span>
+    &mdash; urgent, one call, they book the first firm that answers
+      </div>
+      <p><b>Repairs are the need, exactly as you said. So we buy the repairs.</b></p>
+      <p><b>The plan is what we offer at the end of the repair</b>, and the installs come out of the plan twelve, twenty-four
+      or thirty-six months later. <b>You are not buying installs. You are buying the front of a pipeline you
+      currently do not have.</b></p>
+      <p class="tag">Worth saying plainly: this is a slower model than "run ads, get installs". The first year mostly
+      builds the stock. We would rather tell you that now than in month three.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Two Things On Your Website That Sit In The Way</div>
+    <div class="code">
+  <span class="ph">/ac-repair</span>  and  <span class="ph">/ac-repair-1</span>
+      two URLs, <span class="ph">100% identical content</span>
+
+  Tappable phone numbers across 8 pages:   <span class="ph">0</span>
+  Enquiry forms:                           <span class="ok">1</span>
+    </div>
+    <div class="flag">
+      <div class="lab">The second one matters more than it looks</div>
+      <p><b>You are buying repair searches. A repair search is made by somebody whose heat has just gone out, on a
+      phone, usually standing next to the thing that broke.</b></p>
+      <p><b>Your number is not tappable on any of your eight pages.</b> They have to memorise it, leave your site and
+      type it in. In an emergency, a good proportion will simply ring the next result instead.</p>
+      <p>That is a five-minute change, and until it is made, every dollar spent on repair advertising leaks at the last
+      step.</p>
+      <p><b>And the duplicate page</b> &mdash; <code>/ac-repair</code> and <code>/ac-repair-1</code> are the same page
+      twice. Pick one, redirect the other. It splits whatever ranking either one has earned.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What We Would Do, In Order</div>
+    <ul class="road">
+      <li><b>Make the phone number tappable on every page.</b> Before anything is spent. It is the last step of every
+      repair enquiry you will ever buy.</li>
+      <li><b>Fix the duplicate AC repair page.</b> One URL, one redirect.</li>
+      <li><b>Build the maintenance plan</b> &mdash; the offer, the price, the two visits, what is included. You are the
+      only firm in this comparison without one, and it is the whole mechanism.</li>
+      <li><b>Put the plan in front of every repair customer</b>, at the end of the job, as part of the technician's
+      normal close.</li>
+      <li><b>Then advertise for repairs</b> &mdash; no heat, AC not working, emergency. Urgent, high intent, and they
+      book whoever answers.</li>
+      <li><b>Track the plan count monthly.</b> Not installs, not leads. <b>Plan members is the number that predicts
+      your install revenue two years out</b>, and it is the one that tells us whether this is working.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Nobody advertises their way to qualified installs. They earn them twice a year, in somebody's basement.</h2>
+    <p>Your three biggest competitors worked that out. Two of them did it before 1990.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Prepared by Andrei Givero &middot; AG1 Consulting &middot; 24 September 2026<br><br>
+    For Lucus Bergeron, Call Before You Sign Heating and Air, Fremont, Nebraska. <b>The competitor offers &mdash;
+    Getzschman's tune-up and stated 1960 founding, Burton's membership plan and stated 1989 founding, and BLT's tune-up
+    and stated 40+ years &mdash; were read from each firm's own website in September 2026 and are reproduced as those
+    firms present them. We have not verified any founding date, and we make no claim about the terms, pricing, take-up
+    or profitability of any competitor's plan.</b> <b>The duplicate /ac-repair and /ac-repair-1 pages, the absence of
+    any tappable telephone link across the eight pages read, and the single enquiry form were read from
+    callbeforeyousign.com's own served pages and are reproducible; items recorded as absent describe what a static read
+    returned and are not proof of absence.</b> <b>Your view that an install is not a need and that qualified installs
+    are not reliably generated is as you expressed it to AG1 on our first call and is quoted here as your position, not
+    ours.</b> <b>The description of how a maintenance plan can lead to replacement work is a general commercial model
+    common in the HVAC trade. It is an explanation of a mechanism, not a forecast: no number of plan members, repairs,
+    installs, conversion rate, timescale or revenue figure is promised, projected or guaranteed anywhere in this
+    document, and the statement that the first year mostly builds the stock is a caution rather than a prediction.</b>
+    <b>Nothing here is advice on the design, pricing, terms or regulatory treatment of any service agreement or
+    maintenance contract; those should be settled with your own advisers.</b> <b>Suggested advertising terms are
+    illustrative; costs, competition and results are set by the platforms and vary continuously. No cost per click,
+    cost per lead, booking rate or return is claimed.</b> <b>No Google Business Profile, review count, map position,
+    search ranking or traffic figure has been measured for this or any business, and no competitor's revenue,
+    staffing, pricing or performance has been assessed.</b> Nothing here is a comment on the competence, licensing,
+    insurance or workmanship of this or any other business. Company names are used for identification only and belong
+    to their respective owners.
+  </div>
+</footer>
+</body></html>
